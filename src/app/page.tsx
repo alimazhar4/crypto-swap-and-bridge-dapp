@@ -1,16 +1,43 @@
+"use client";
+import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
+
 import Header from "@/components/Header";
-import { Widget } from "@/components/Widget";
-import { WidgetEvents } from "@/components/WidgetEvents";
+import Loading from "@/components/Loading";
+
+export const DynamicWidgetEvents = dynamic(
+  () => import('../components/WidgetEvents').then((module) => module.WidgetEvents) as any,
+  {
+    ssr: false,
+  },
+);
+
+export const DynamicWidget = dynamic(
+  () => import('../components/Widget').then((module) => module.Widget) as any,
+  {
+    ssr: false,
+    loading: () => <Loading />,
+  },
+);
 
 export default function Home() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+      setMounted(true);
+  }, []);
+
   return (
     <main className="relative">
       <Header />
-      <div className="mt-10 flex min-h-screen flex-col items-center justify-between">
-        <WidgetEvents />
-        <Widget />
-      </div>
-      
+      {
+        mounted && (
+          <div className="mt-10 flex min-h-screen flex-col items-center justify-between">
+            <DynamicWidgetEvents />
+            <DynamicWidget />
+          </div>
+        )
+      }
     </main>
   );
 }
