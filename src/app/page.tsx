@@ -5,14 +5,14 @@ import dynamic from "next/dynamic";
 import Header from "@/components/Header";
 import Loading from "@/components/Loading";
 
-export const DynamicWidgetEvents = dynamic(
+const DynamicWidgetEvents = dynamic(
   () => import('../components/WidgetEvents').then((module) => module.WidgetEvents) as any,
   {
     ssr: false,
   },
 );
 
-export const DynamicWidget = dynamic(
+const DynamicWidget = dynamic(
   () => import('../components/Widget').then((module) => module.Widget) as any,
   {
     ssr: false,
