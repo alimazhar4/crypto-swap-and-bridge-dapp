@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Crypto Swap and Bridge
+#### This is just for learning purposes - DYOR
+Swap cryptocurrencies and bridge them across multiple networks using the Li.Fi Protocol.
+The app uses the Li.fi Widget to integrate the swapping and bridging features. The complete details to use Li.Fi SDK and Widget can be found in their documentation at the following link:
+<a href="https://docs.li.fi/" target="_blank">https://docs.li.fi/</a>
 
-## Getting Started
+### Live Demo: <a href="https://crypto-swap-and-bridge.vercel.app/" target="_blank">https://crypto-swap-and-bridge.vercel.app/</a>
 
-First, run the development server:
+<p align="center"><img src="https://github.com/alimazhar4/crypto-swap-and-bridge-dapp/assets/59063759/5a911155-bff5-4334-b32f-0b170a11525b" width=80%></p>
 
-```bash
+## Tech Stack Used
+1) Next Js - v14.2.2
+3) Tailwind CSS
+4) Li.Fi
+
+## Installation
+1) Clone or fork this repository, and then download the fork/clone
+2) Open the project in your IDE and install the dependencies using
+```sh
+npm install
+```
+3) Now start the dev build by
+```sh
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+4) For production build, run the following command
+```sh
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Suggestions and Improvements are appreciated
